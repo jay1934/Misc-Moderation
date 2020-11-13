@@ -122,6 +122,7 @@ After either of these commands are sent:
 
 - All roles will be removed from the user and stored in a database
 - The custom role is added
+- All messages sent by the user in the last 24 hours will be deleted (bot must be online for at least 24 hours without reset for this to work)
 - A timer is started
 - A message is sent in the channel the command was sent
 - A message is sent in the specified log channel
