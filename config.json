@@ -1,0 +1,21 @@
+{
+  "logChannelID": "",
+  "bannedRoleID": "",
+  "mutedRoleID": "",
+  "permissions": {
+    "end": ["Role ID 1", "Role ID 2"],
+    "reroll": ["There can be as little or as many as you want"],
+    "start": [],
+    "clearinvites": [],
+    "invites": [],
+    "announce": [],
+    "mute": [],
+    "kick": [],
+    "ban": [],
+    "warn": [],
+    "warnings": [],
+    "clearwarnings": [],
+    "clearallwarnings": []
+  },
+  "token": ""
+}
