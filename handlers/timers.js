@@ -10,7 +10,6 @@ const actions = {
 module.exports = {
   startTimer({ id, action, date, duration, exec, old }, idx, guild, timers) {
     setTimeout(() => {
-      console.log(1);
       guild.members
         .fetch(id)
         .then((member) => {
@@ -26,7 +25,6 @@ module.exports = {
                 .setFooter(`Originally ${action} by ${exec} for ${duration}`)
             );
         })
-        .catch((e) => console.log('err', e));
       fs.writeFileSync(
         './data/timers.json',
         JSON.stringify(
