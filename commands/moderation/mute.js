@@ -58,7 +58,7 @@ module.exports = {
           .filter(
             (msg) =>
               msg.author &&
-              msg.author.id === message.member.id &&
+              msg.author.id === member.id &&
               msg.createdTimestamp > Date.now() - 4.32e7
           )
           .keyArray();
