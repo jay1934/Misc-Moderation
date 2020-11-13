@@ -49,6 +49,21 @@ module.exports = {
         `:x: My highest role is below or equal to ${member.user.username}'s!`
       );
 
+    message.guild.channels.cache
+      .filter(({ type }) => type === 'text')
+      .forEach((channel) => {
+        const filtered = channel.messages.cache
+          .filter(
+            (msg) =>
+              msg.author &&
+              msg.author.id === member.id &&
+              msg.createdTimestamp > Date.now() - 4.32e7
+          )
+          .keyArray();
+
+        if (filtered.length) channel.bulkDelete(filtered);
+      });
+   
     const time = ms(ms(duration), { long: true });
 
     const data = {
