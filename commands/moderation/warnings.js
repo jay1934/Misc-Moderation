@@ -22,12 +22,11 @@ module.exports = {
       );
     }
 
-    console.log(member);
     const warnings = JSON.parse(
       require('fs').readFileSync('./data/warns.json')
     )[member.id];
 
-    if (!warnings)
+    if (!warnings || !warnings.length)
       return message.channel.send(
         `${member.user.username} has not yet been warned.`
       );
